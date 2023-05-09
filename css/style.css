@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff url('../imagens/fundo.png') repeat-x;
+}
+
+header{
+    background-color: #457eac;
+    background-image: url('../img/fundo.png');
+    height: 225px;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Barra de navegação desktop
+*/
+.menu-desktop .active{
+    color: #4e0217;
+    text-decoration: underline;
+}
+
+.logo{
+    width: 150px;
+    height: 50px;
+    margin-left: 5%;
+}
+
+nav.menu-desktop{
+    position: relative;
+    top: 50px;
+}
+
+nav.menu-desktop ul{
+    list-style-type: none;
+    background-color: #d80032;
+    max-width: 750px;
+}
+
+nav.menu-desktop ul li{
+    display: inline-block;
+}
+
+nav.menu-desktop ul li a{
+    text-decoration: none;
+    background: url('../img/divisor.png') repeat-y;
+    color: #fefee3;
+    padding: 0.5rem 1.5rem;
+    line-height: 2.1rem;
+}
+
+nav.menu-desktop ul a#primeiro{
+    background: none;
+}
+
+nav.menu-desktop ul li a:hover:not(.active){
+    color: #870529;
+}
+
+.hamburger-menu{
+    background-image: url('../img/menu.png');
+    background-repeat: no-repeat;
+    position: relative;
+    left: 90%;
+    display: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+/* Barra de navegação mobile
+*/
+nav.menu-mobile{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 225px;
+    width: 100%;
+    background-color: #294c71;
+}
+
+nav.menu-mobile ul{
+    text-align: center;
+    list-style-type: none;
+}
+
+nav.menu-mobile ul li{
+    padding: 12px 5px;
+    border-bottom: 1px solid #457eac;
+}
+
+nav.menu-mobile ul li:hover{
+    background-color: #d80032;
+    color: white;
+    opacity: 0.5;
+}
+
+nav.menu-mobile ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 15px;
+    color: #fefee3;
+}
+
+/* Configura layout de três colunas
+ */
+.conteudo{
+    display: flex;
+}
+
+main{
+    width: 75%;
+    order: 2;
+}
+
+aside{
+    width: 25%;
+    order: 1;
+}
+
+/*Caixa artigos materia legislação
+*/
+.caixa{
+    padding: 10px;
+    margin: 10px;
+    background-image: url('../img/fundo-caixa.png');
+}
+
+.artigos{
+    display: flex;
+}
+
+.materia{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.materia h2{
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #294c71;
+    color: #fff;
+}
+
+.materia h3{
+    font-size: 1rem;
+    padding: 5px;
+    background: #294c71;
+    color: #fff;
+}
+
+.legislacao h3{
+    font-size: 0.9rem;
+    margin: 5px 6px 0 0;
+    padding: 5px;
+    background: #d80032;
+    color: #fff;
+}
+
+.lista-noticias ul{
+    list-style: none;
+}
+
+.lista-noticias a{
+    text-decoration: none;
+    color: #000;
+}
+
+.lista-noticias img{
+    max-width: 80px;
+    width: 100%;
+    flex-grow: 3;
+}
+
+.box-lista{
+    display: flex;
+    padding: 8px;
+}
+
+.lista-noticias a .text{
+    padding: 5px;
+    flex-grow: 1;
+    font-size: 0.8rem;
+}
+
+/*Formatar menus laterais
+*/
+.lateral ul{
+    list-style: none;
+}
+
+.lateral ul li a{
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    line-height: 30px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.lateral ul li a:hover{
+    background: #f9f9f9 url('../img/marcador.png') left center no-repeat;
+    color: #a1a1a1;
+    padding-left: 20px;
+}
+
+/*formatado formulários
+*/
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    background-color: #fff;
+    outline: none;
+}
+
+input.submit {
+    display: block;
+    width: 80px;
+    color: #fff;
+    background-color: #d80032;
+    border: 2px solid #b70135;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    background-color: #457eac;
+    line-height: 45px;
+}
+
+@media screen and (max-width: 768px){
+    nav.menu-desktop{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .conteudo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        width: 100%;
+        order: 1;
+    }
+
+    aside{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .artigos{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px){
+    nav.menu-mobile ul li{
+        display: none;
+    }
+}
+
